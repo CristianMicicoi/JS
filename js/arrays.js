@@ -5,6 +5,6 @@ const listUsers = ["Dev Ed", "Jhonny", "You", "John"];
 // listUsers.pop();
 // listUsers.push();
 
-console.log(listUsers.length);
+console.log(listUsers);
 
 console.log(listUsers.indexOf("Jhonny"));

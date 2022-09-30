@@ -1,6 +1,5 @@
 //Javascript Operators
 
-
 /* Basic Operators*/
 
 let inbox = 10;

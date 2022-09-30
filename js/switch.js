@@ -21,7 +21,21 @@
 
 let userInput = prompt("Tell me a preffered fruit");
 
-switch (userInput) {
+//if you have the capslock on and write with UPPERCASE instead of lowercase, there is a method to make everithinh lowercase:
+let convertedValue = userInput.toLowerCase();
+// console.log(convertedValue);
+
+switch (convertedValue) {
   case "kiwi":
-    console.log("Kiwi is the most thorny fruit");
+    alert("Kiwi is the most thorny fruit");
+    break;
+  case "mango":
+    alert("I like mango fruit compote");
+    break;
+  case "apple":
+    alert("Is the most common fruit at country side");
+    break;
+  default:
+    alert("That fruit is common rare");
+    break;
 }
