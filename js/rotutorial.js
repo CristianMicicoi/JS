@@ -235,13 +235,60 @@ var p = new Person("Mihai", "Popescu", new Date("11-12-1988"));
 console.log(p.dateOfBirth);
 
 // manipulare DOM(document- object- model) sau suma tuturor elementelor HTML
-//de ex, pentru selectarea tagului h1 din html:
+// "query" selector, de ex, pentru selectarea tagului h1 din html:
 
 //daca avem mai multe taguri h1, cel mai bine e sa selectam elementul sau elementele dupa clasa sau id
 // var h1 = document.querySelector("#subtitle");
-// //selecteaza doar primul element cu clasa sau id-ul dat
+// //selecteaza doar primul element cu clasa sau id-ul dat  ==============
 // console.log(h1.outerHTML);
 
-//pentru a selecta toate elementele cu clasa sau id-ul dat:
-var query = document.querySelectorAll(".page__subtitle");
-console.log(query);
+//pentru a selecta toate elementele cu clasa sau id-ul dat:  =============
+// var query = document.querySelectorAll(".page__subtitle");
+// console.log(query);
+
+// "get" selector     ======================================
+
+// var query = document.getElementsByClassName("page__subtitle");
+
+// console.log(query);
+
+// var query = document.getElementById("title");
+
+// console.log(query.innerHTML);
+
+// adaugare HTML intr-un HTML existent  ================
+// var query = document.getElementById("title");
+
+// // query.append =============
+// query.append("Buna ziua!");
+
+// console.log(query.innerText);
+
+// adaugare HTML in tagurile html existente =========================
+var query = document.getElementById("title");
+
+query.innerHTML += "<p id='text'>Buna ziua din nou!</p>";
+console.log(query.innerHTML);
+
+// selectare element care contine "Buna ziua din nou", adica id
+var hello = document.getElementById("text");
+// query.removeChild(hello);
+
+// schimbare stil al elementului selectat
+hello.style.color = "red";
+
+// Evenimente/ events ============================
+// selectam elementul buton nr 1(submit)
+// var submitButton = document.getElementById("btn__submit");
+// // "prinderea" elementului selectat, alocarea parametrilor pentru ce o sa faca butonul si declararea functiei inline
+// submitButton.addEventListener("click", function (e) {
+//   console.log("button clicked");
+// });
+
+// putem declara functia si outline
+var submitButton = document.getElementById("btn__submit");
+submitButton.addEventListener("click", onBtnClick);
+
+function onBtnClick(e) {
+  alert("Button has been clicked");
+}
