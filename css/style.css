@@ -1,0 +1,9 @@
+.JS-color {
+    color: red;
+    font-size: 50px;
+    transform: translateX(120px) rotate(360deg);
+}
+
+.main-title {
+    transition: all 0.8s ease;
+}
