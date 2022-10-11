@@ -89,37 +89,60 @@
 
 // 5) =====================================================
 
-// function sumArray(arr) {
-//   let sum = 0;
-//   for (let i = 0; i < arr.length; i++) {
-//     sum = sum + arr[i];
-//   }
-//   console.log(sum);
-// }
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  console.log(sum);
+}
 
 // sumArray([4, 7, 3, 5]);
 
 // 6) =================================================
 
-function greater(arr, abc) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > abc) {
-      sum = sum + arr[i];
+// function greater(arr, abc) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > abc) {
+//       sum = sum + arr[i];
+//     }
+//   }
+//   console.log(sum);
+// }
+
+// greater([1, 2, 15, 19, 122], 20);
+
+// // 7) search an array for the given number and display its index;
+
+// function arrayIndex(list, search) {
+//   for (let i = 0; i < list.length; i++) {
+//     if (list[i] === search) {
+//       console.log(i);
+//     }
+//   }
+// }
+// arrayIndex([122, 134, 79, 18], 18);
+
+// buttons exercise
+
+const buttons = document.querySelectorAll('.btn');
+const showText = document.querySelector('.sum');
+let number = '';
+let list = [];
+
+buttons.forEach((button) => {
+  button.addEventListener('click', function () {
+    if (button.innerText === '=') {
+      // calculeaza suma array
+      sumArray(list);
+    } else if (button.innerText === '+') {
+      list.push(Number(number));
+      number = '';
+      console.log(list);
+    } else {
+      number = number + button.innerText;
+      console.log(number);
     }
-  }
-  console.log(sum);
-}
-
-greater([1, 2, 15, 19, 122], 20);
-
-// 7) search an array for the given number and display its index;
-
-function arrayIndex(list, search) {
-  for (let i = 0; i < list.length; i++) {
-    if (list[i] === search) {
-      console.log(i);
-    }
-  }
-}
-arrayIndex([122, 134, 79, 18], 18);
+  });
+});
