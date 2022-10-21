@@ -2,5 +2,8 @@
   "javascript.format.insertSpaceAfterConstructor": true,
   "javascript.preferences.quoteStyle": "single",
   "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "javascript.format.semicolons": "insert",
+  "js/ts.implicitProjectConfig.target": "ES2020"
 }
