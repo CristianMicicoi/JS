@@ -17,15 +17,42 @@ body img {
 }
 
 h2 {
-    margin-top: 20px;
+    margin: 45px 0;
     color: blanchedalmond;
     text-align: center;
+    letter-spacing: 5px;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: blanchedalmond;
+    font-size: 18px;
+}
+
+.date input {
+    background-color: blanchedalmond;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#submit {
+    margin: 5px;
+    color: blanchedalmond;
+    background-color: rgb(193, 94, 94);
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 5px;
+    transform: translateX(-150%);
 }
 
 .countdown__container {
     display: flex;
     justify-content: space-around;
 }
+
 
 .grid__files {
     display: grid;
@@ -34,7 +61,7 @@ h2 {
     grid-column-gap: 16px;
     grid-row-gap: 0;
     padding: 20px;
-    margin: 30px;
+    margin: 5px 0 20px 0;
 }
 
 .files {
@@ -45,7 +72,7 @@ h2 {
     width: 70px;
     height: 70px;
     background-color: #2B2C45;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .files p {
@@ -71,5 +98,5 @@ h2 {
 
 #display {
     color: rgb(197, 244, 41);
-    font-size: 42px;
+    font-size: 36px;
 }
