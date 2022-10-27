@@ -1,11 +1,3 @@
-function sumArray(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
-  }
-  return sum;
-}
-
 // function difArray(arr) {
 //   let sum = arr[0];
 //   for (let i = 1; i < arr.length; i++) {
@@ -14,11 +6,18 @@ function sumArray(arr) {
 //   return sum;
 // }
 
+//Selectors
+
 const buttons = document.querySelectorAll('.btn');
+
 const deleteItem = document.querySelector('.del__btn');
+
 const resetDisplay = document.querySelector('.reset__btn');
+
 const showText = document.querySelector('.grid__button');
+
 const output = document.querySelector('.output');
+
 const prio0 = ['(', ')'];
 const prio1 = ['*', '/'];
 const prio2 = ['+', '-'];
@@ -26,9 +25,14 @@ const prio2 = ['+', '-'];
 const operators = ['+', '-', '*', '/'];
 
 let number = '';
+
 let list = [];
+
 let fp = [];
+
 let st = [];
+
+//Event Listeners
 
 buttons.forEach((button) => {
   button.addEventListener('click', function () {
@@ -89,6 +93,16 @@ buttons.forEach((button) => {
 });
 */
 
+//Functions
+
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+
 function reset() {
   number = '';
   list = [];
@@ -96,16 +110,6 @@ function reset() {
   fp = [];
   st = [];
 }
-
-// let arr = [1, 2, 3];
-
-// function sumaRecursiva(arr, i) {
-//   if (i == 0) {
-//     return 0;
-//   }
-//   return arr[i - 1] + sumaRecursiva(arr, i - 1);
-// }
-// console.log(sumaRecursiva(arr, arr.length));
 
 let arr = [2, 3, 3, '-', '*', 30, 6, 4, 1, '*', '+', '/', 6, '-', '+'];
 
@@ -138,3 +142,13 @@ function Calcul(array) {
   return Calcul(array);
 }
 // console.log(Calcul(arr));
+
+// let arr = [1, 2, 3];
+
+// function sumaRecursiva(arr, i) {
+//   if (i == 0) {
+//     return 0;
+//   }
+//   return arr[i - 1] + sumaRecursiva(arr, i - 1);
+// }
+// console.log(sumaRecursiva(arr, arr.length));

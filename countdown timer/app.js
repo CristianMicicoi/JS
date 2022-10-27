@@ -1,7 +1,6 @@
 // Selectors
 
 const countDate = new Date('Oct 25, 2022 15:00:00').getTime();
-
 // const countDate = new Date('Dec 25, 2022 00:01:00').getTime();
 
 const countTime = document.getElementsByClassName('files');
@@ -45,13 +44,6 @@ submitBtn.addEventListener('click', function (e) {
 
     // console.log(distance);
   });
-  // console.log(countDate);
-  // let value = new Date(inputValue.value);
-  // let value = new Date();
-  // console.log(value);
-  //   console.log(value.getFullYear());
-  //   console.log(value.getMonth());
-  //   console.log(value.getDay());
 });
 
 // Functions
