@@ -13,29 +13,43 @@
     <div class="cards__title">Splitter</div>
 
     <div class="cards__container">
-        <div class="card white__card">
-            <label for="bill">Bill</label>
-            <input type="text" id="bill" placeholder="Lei">
-            <div>Select Tip ></div>
-            <button class="btns">5%</button>
-            <button class="btns">10%</button>
-            <button class="btns">15%</button>
-            <button class="btns">25%</button>
-            <button class="btns">50%</button>
-            <button class="btns custom-btn">Custom</button>
-            <label for="people">Number of People</label>
-            <input type="text" id="people">
+        <div class="card card--white">
+            <div class="total">
+                <label for="bill">Bill</label>
+                <input type="number" id="bill" placeholder="$">
+            </div>
+            <div class="select-tip">Select Tip % </div>
+            <div class="grid--btns">
+                <button class="btn" value="0.05">5%</button>
+                <button class="btn" value="0.10">10%</button>
+                <button class="btn" value="0.15">15%</button>
+                <button class="btn" value="0.25">25%</button>
+                <button class="btn" value="0.50">50%</button>
+                <button class="btn btn--custom" value="">Custom</button>
+            </div>
+            <div class="customers">
+                <label for="people">Number of People</label>
+                <input type="number" id="people">
+            </div>
         </div>
-        <div class="card green__card">
-            <div class="tip-amount">Tip Amount <span>/ person</span></div>
-            <div class="total-tip">Total<span>/ person</span></div>
-            <button class="reset-btn">Reset</button>
+        <div class="card card--green">
+            <div class="tip-amount">Tip Amount
+                <br>
+                <span> / person</span>
+            </div>
+            <div class="tip-output">$0.00</div>
+            <div class="total-tip-person">Total
+                <br>
+                <span> / person</span>
+            </div>
+            <div class="total-output">$0.00</div>
+            <button class="btn btn--reset">Reset</button>
         </div>
     </div>
 
 
 
-    <script src="app.jss"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
