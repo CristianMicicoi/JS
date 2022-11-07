@@ -1,41 +1,57 @@
 //Selectors
 const buttons = document.querySelectorAll('.btn');
-const input = document.querySelectorAll('input');
-// const peopleNr = document.querySelector('#people');
+
+const inputs = document.querySelectorAll('input');
+
 const tipOutput = document.querySelector('.tip-output');
+
 const totalOutput = document.querySelector('.total-output');
 
 //Event Listener
-// daca daca unul din inputuri e gol, nu se efectueaza eventul pe butoane
+
 buttons.forEach((button) => {
-  button.addEventListener('click', function () {
-    [...buttons].forEach((element) => {
-      element.classList.remove('active');
-    });
-    button.classList.add('active');
+  button.addEventListener('click', function (event) {
+    // daca unul din input-uri e gol, nu se efectueaza event-ul pe butoane
+    const totalAmount = document.querySelector('#bill')?.value;
+    const persons = document.querySelector('#people')?.value;
+    if (totalAmount && persons) {
+      //add remove active class
+      const activeBtn = event.target;
+      addRemoveActiveClass(activeBtn);
+      //calculate and display amount
+      calculateAndDisplayAmount(activeBtn);
+    }
+    //add validation on inputs and message
   });
 });
 
-// input.addEventListener('change', function () {
-//   tipOutput.innerText = `$${tipAmount()}`;
-// });
+function addRemoveActiveClass(clickedBtn) {
+  [...buttons].forEach((element) => {
+    element.classList.remove('active');
+  });
+  clickedBtn.classList.add('active');
+}
 
-// peopleNr.addEventListener('change', function () {
-//   //executa funcctia doar daca butonul e activ
+//adaug eventListener change pe fiecare input
+inputs.forEach((input) => {
+  input.addEventListener('input', function () {
+    //daca am buton selectat, recalculez
+    const activeBtn = document.querySelector('.btn.active');
+    if (activeBtn) {
+      calculateAndDisplayAmount(activeBtn);
+    }
+    //daca nu am buton selectat, nu fac nimic
+  });
+});
 
-//   const result = input.value / peopleNr.value + Number(tipAmount());
-//   totalOutput.innerText = `$${result.toFixed(2)}`;
-// });
-
-//Functions
-
-// function tipAmount() {
-//   const result = input.value * buttons.value;
-//   tipOutput.innerText = `$${result.toFixed(2)}`;
-//   console.log(result);
-// }
-
-function tipAmount() {
-  const result = input.value * buttons.value;
-  return result.toFixed(2);
+function calculateAndDisplayAmount(activeBtn) {
+  //get inputs values
+  const totalAmount = document.querySelector('#bill')?.value;
+  const persons = document.querySelector('#people')?.value;
+  //calculate amount
+  const tipAmount = (totalAmount * activeBtn?.value ?? 1) / persons;
+  const totalPerson = totalAmount / persons + tipAmount;
+  //display calculated amount
+  tipOutput.innerText = tipAmount;
+  totalOutput.innerText = totalPerson;
 }

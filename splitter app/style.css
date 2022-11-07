@@ -6,32 +6,40 @@
 
 body {
     /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     margin: 0 auto;
     background-color: #C5E4E7;
 }
 
 .cards__title {
-    /* text-align: center; */
+    text-align: center;
     margin-top: 35px;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
+    letter-spacing: 7px;
     text-transform: uppercase;
-    color: rgb(113, 112, 112);
+    color: rgb(80, 93, 93);
 }
 
 .cards__container {
     display: flex;
-    align-items: center;
     background-color: ghostwhite;
     margin: 25px;
-    width: 60%;
-    border-radius: 10px;
+    padding: 5px;
+    min-width: 50%;
+    border-radius: 20px;
 }
 
 .card {
     align-self: center;
     margin: 0 auto;
 }
+
+/*==================== white-card ====================*/
 
 .card--white {
     width: 50%;
@@ -48,6 +56,7 @@ body {
 
 .customers input,
 .total input {
+    text-align: right;
     width: 100%;
     padding: 6px;
     outline: none;
@@ -75,7 +84,6 @@ body {
 }
 
 .btn {
-    /* align-items: center; */
     cursor: pointer;
     background-color: #00474A;
     color: #c3dedf;
@@ -89,7 +97,8 @@ body {
     color: #c3dedf;
 }
 
-.btn:active {
+.btn:active,
+.btn.active {
     background-color: #80d3c9;
     color: #00474A;
 }
@@ -116,6 +125,8 @@ body {
     font-weight: 600;
 }
 
+/*==================== Green-card ====================*/
+
 .card--green {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -123,8 +134,8 @@ body {
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     align-items: center;
-    margin: 15px;
-    padding: 15px 10px;
+    margin: 10px;
+    padding: 25px 10px;
     background-color: #00474A;
     color: #c3dedf;
     width: 50%;
@@ -148,5 +159,4 @@ body {
     background-color: #10585b;
     color: rgb(113, 112, 112);
     margin-top: 10px;
-
 }

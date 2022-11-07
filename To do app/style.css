@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-size: 18px;
+    letter-spacing: 5px;
+    /* text-align: left; */
+}
+
+body {
+    background-image: linear-gradient(120deg, #415edb, #844cb8);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 18px;
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+header,
+form {
+    min-height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: 8px;
+    font-size: 28px;
+    border: none;
+    background-color: white;
+    outline: none;
+}
+
+form button {
+    min-height: 30px;
+    color: #b9cede;
+    background-color: rgb(46, 48, 164);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #a573ed;
+    color: rgb(118, 53, 171);
+}
+
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo-list li {
+    padding: 4px 2px 4px 5px;
+    margin: 8px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.todo-list li button {
+    width: 40px;
+    height: 35px;
+    color: #b9cede;
+    background-color: #640a8ecd;
+    cursor: pointer;
+    border: none;
+}
+
+.complete-btn,
+.trash-btn {
+    background-color: #5204f9;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* apply style for the click to activate on the all surface of button, not just on the icon*/
+.fa-check,
+.fa-trash {
+    pointer-events: none;
+}
+
+
+/*animation for lists deleting*/
+.fall {
+    transform: translateY(128px) rotateZ(20deg);
+    opacity: 0;
+}

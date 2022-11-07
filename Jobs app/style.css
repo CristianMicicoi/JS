@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background-color: rgb(231, 230, 246);
+    /* color: white; */
+    font-family: "Poppins", sans-serif;
+    /* min-height: 100vh; */
+}
+
+.wrapper {
+    display: flex;
+    padding: 20px;
+}
+
+.forms__container {
+    border-radius: 5px;
+    background-color: rgb(160, 180, 180);
+}
+
+.forms__container form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.forms__container label {
+    margin-top: 8px;
+}
+
+.forms__container input,
+select {
+    outline: none;
+}
+
+.forms__container form input,
+select,
+button {
+    padding: 8px;
+    margin: 5px 0;
+}
+
+.form__btns {
+    margin: 10px auto;
+}
+
+.btn-add {
+    background-color: bisque;
+    color: rgb(9, 76, 76);
+}
+
+.btn-update {
+    background-color: #68a446;
+    color: rgb(41 102 102);
+}
+
+.btn-add,
+.btn-update {
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    width: 137px;
+    cursor: pointer;
+}
+
+.person-cards {
+    background-color: honeydew;
+    flex-grow: 1;
+}
+
+.person-cards h3 {
+    padding: 8px 0 0 16px;
+}
+
+.cards-holder {
+    padding: 12px;
+}
+
+.card {
+    display: flex;
+    background-color: rgba(101, 155, 155, 0.358);
+    padding: 18px;
+    margin-bottom: 8px;
+    width: 280px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px rgba(148, 166, 178, 0.93);
+}
+
+.card i {
+    padding-right: 8px;
+    color: rgb(68, 95, 87);
+}
+
+.card-username {
+    margin-bottom: 8px;
+}
+
+.birthday {
+    padding: 2px 10px 10px 22px;
+    flex: 1 1 100%;
+}
+
+.job {
+    padding: 8px;
+}
+
+.btns-card {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-remove,
+.btn-updates {
+    margin: 24px 0 0 8px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card .btn-remove {
+    background-color: rgba(225, 162, 85, 0.474);
+    color: rgb(6, 63, 63);
+}
+
+.card .btn-updates {
+    background-color: #84c261;
+    color: rgb(41 102 102);
+    margin-left: 50px;
+}

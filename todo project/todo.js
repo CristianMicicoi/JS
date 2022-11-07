@@ -125,13 +125,13 @@ function getTodos() {
     // add todo to local storage
 
     //Add 'check-mark' button
-    const completedButton = document.createElement('buton');
+    const completedButton = document.createElement('button');
     //adding in the button the '<i>' tag
     completedButton.innerHTML = '<i class="fas fa-check"></i>';
     completedButton.classList.add('complete-btn');
     todoDiv.appendChild(completedButton);
     // Create 'delete' button
-    const trashButton = document.createElement('buton');
+    const trashButton = document.createElement('button');
     //adding in the button the '<i>' tag
     trashButton.innerHTML = '<i class="fas fa-trash"></i>';
     trashButton.classList.add('trash-btn');
