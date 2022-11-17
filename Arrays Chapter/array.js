@@ -39,7 +39,7 @@
 //   name: 'DeveloperEd',
 //   tweets: 20,
 //   age: 26,
-// };
+// }
 
 // const newTweet = tweet;
 // newTweet.tweets = 21;
@@ -128,7 +128,7 @@ const newVideos = videos.map(function (video) {
 
 // FIND
 const searchTutorial = videos.find(function (video) {
-  // function goes among eeach items and only return when the statement become true
+  // function goes among each items and only return when the statement become true
   return video.includes('html basics');
 });
 
@@ -137,4 +137,54 @@ const shortSearch = videos.filter(function (video) {
   return video.length < 10;
 });
 
-console.log(shortSearch);
+const highRating = games.filter(function (game) {
+  return game.rating > 9;
+});
+
+// console.log(highRating);
+
+//SOME and EVERY
+
+//Every
+const checkRating = games.every(function (game) {
+  return game.rating > 8;
+});
+
+// console.log(checkRating);
+
+//Some
+const someRating = games.some(function (game) {
+  return game.rating > 8;
+});
+
+// console.log(someRating);
+
+//ARROW FUNCTIONS
+//Arrow functions allow us to write shorter and cleaner function syntax
+
+// const time = new Date().getHours();
+// let greeting;
+// if (time < 10) {
+//   greeting = 'Good morning!';
+// } else if (time < 20) {
+//   greeting = 'Good day!';
+// } else {
+//   greeting = 'Good evening!';
+// }
+// console.log(greeting);
+
+let array = ['a', 'b', 'c', 'def', 'test'];
+
+for (let i = 0; i < array.length; i++) {
+  console.log(`${array[i]} -> ${i}`);
+}
+
+array.forEach(function (value, index) {
+  console.log(`${value} -> ${index}`);
+});
+
+let i = 0;
+while (i < array.length) {
+  console.log(`${array[i]} -> ${i}`);
+  i++;
+}

@@ -6,7 +6,7 @@
 
 body {
     margin: 0 auto;
-    background-color: rgb(231, 230, 246);
+    /* background-color: rgb(231, 230, 246); */
     /* color: white; */
     font-family: "Poppins", sans-serif;
     /* min-height: 100vh; */
@@ -19,29 +19,44 @@ body {
 
 .forms__container {
     border-radius: 5px;
-    background-color: rgb(160, 180, 180);
+    /* background-color: rgb(160, 180, 180); */
+    /* padding: 18px; */
 }
 
 .forms__container form {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    /* margin: 20px; */
+    padding: 16px;
 }
 
 .forms__container label {
     margin-top: 8px;
+    font-weight: 600;
+    color: rgb(80, 148, 154);
 }
 
 .forms__container input,
 select {
     outline: none;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .forms__container form input,
 select,
 button {
+    /* background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)); */
+    /* background-color: white; */
     padding: 8px;
     margin: 5px 0;
+}
+
+#first,
+#last,
+#job,
+#b-day {
+    background-color: white;
 }
 
 .form__btns {
@@ -53,9 +68,21 @@ button {
     color: rgb(9, 76, 76);
 }
 
+.btn-add:hover {
+    background-color: rgb(247, 211, 167);
+}
+
+.btn-add:active {
+    background-color: rgb(226, 163, 87);
+}
+
 .btn-update {
     background-color: #68a446;
     color: rgb(41 102 102);
+}
+
+.btn-update:hover {
+    background-color: #8cc66a;
 }
 
 .btn-add,
@@ -68,12 +95,11 @@ button {
 }
 
 .person-cards {
-    background-color: honeydew;
     flex-grow: 1;
 }
 
 .person-cards h3 {
-    padding: 8px 0 0 16px;
+    padding: 0 0 0 16px;
 }
 
 .cards-holder {
@@ -115,7 +141,7 @@ button {
 }
 
 .btn-remove,
-.btn-updates {
+.btn-update-card {
     margin: 24px 0 0 8px;
     font-weight: 600;
     border: none;
@@ -123,13 +149,25 @@ button {
     cursor: pointer;
 }
 
-.card .btn-remove {
-    background-color: rgba(225, 162, 85, 0.474);
+.btn-remove {
+    background-color: rgba(255, 177, 82, 0.527);
     color: rgb(6, 63, 63);
 }
 
-.card .btn-updates {
+.btn-remove:hover {
+    background-color: rgba(225, 162, 85, 0.647);
+}
+
+.btn-remove:active {
+    background-color: rgba(186, 122, 44, 0.888);
+}
+
+.btn-update-card {
     background-color: #84c261;
     color: rgb(41 102 102);
     margin-left: 50px;
+}
+
+.btn-update-card:hover {
+    background-color: #68974dcd;
 }
