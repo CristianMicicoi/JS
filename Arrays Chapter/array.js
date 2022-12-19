@@ -122,9 +122,18 @@ const games = [
   { title: 'WWE 2k20', rating: 4 },
 ];
 
-const newVideos = videos.map(function (video) {
-  return video.toUpperCase();
-});
+//Ternary operator
+// const newVideos = videos.map(function (video) {
+// if (video.length < 10) {
+//   return video;
+// } else {
+//   return 'nope';
+// }
+// in place of the if above we can write:
+//   return video.length < 10 ? video : 'nope';
+// });
+
+// console.log(newVideos);
 
 // FIND
 const searchTutorial = videos.find(function (video) {
@@ -162,6 +171,64 @@ const someRating = games.some(function (game) {
 //ARROW FUNCTIONS
 //Arrow functions allow us to write shorter and cleaner function syntax
 
+//How we used to do it
+const newVideos = videos.map(function (video) {
+  return video.length < 10 ? video : 'nope';
+});
+
+//how we do simplified
+// const arrowVideos = videos.map((video) => (video.length < 10 ? video : 'nope'));
+
+const arrowVideos = videos.map((video) => video.toUpperCase());
+
+// console.log(arrowVideos);
+
+//SORT
+const items = ['Banana', 'Orange', 'Apple', 'Mango'];
+const ratings = [98, 56, 4, 2, 22, 45.6, 10, 80];
+
+// items.sort();
+// console.log(items);
+
+//array of numbers doesn't arrange ascendent with SORT
+//return is negative if a is sorted before b
+//positive if b is sorted efore a
+//if they are the same is 0, nothing changes
+// ratings.sort((a, b) => a - b); //ascending
+// // return b - a; //descending
+
+// console.log(ratings);
+
+// games.sort((a, b) => a.rating - b.rating);
+
+// console.log(games);
+
+//Creating copies- Spread operator ==========
+
+// const gamesDesc = [...games];
+
+// gamesDesc[0].rating = 0;
+
+//spread operator '...'
+
+// const descRating = [...ratings];
+// descRating.sort((a, b) => b - a);
+// console.log(descRating);
+// console.log(ratings);
+
+//Concatenate multiple arrays
+// const name = 'developedbyed';
+
+// const letters = name.split('');
+
+// console.log(letters);
+
+let dailyActivities = ['eat', 'exercise', 'work', 'sleep'];
+let start = -2; //index number where we want to start from
+let deleteCount = 2; // the number of elements we want to delete
+dailyActivities.splice(start, deleteCount, 'walk', 'help');
+console.log(dailyActivities);
+
 // const time = new Date().getHours();
 // let greeting;
 // if (time < 10) {
@@ -173,18 +240,50 @@ const someRating = games.some(function (game) {
 // }
 // console.log(greeting);
 
-let array = ['a', 'b', 'c', 'def', 'test'];
+//3 modes of display the index of the array
+// let array = ['a', 'b', 'c', 'def', 'test'];
 
-for (let i = 0; i < array.length; i++) {
-  console.log(`${array[i]} -> ${i}`);
-}
+// for (let i = 0; i < array.length; i++) {
+//   console.log(`${array[i]} -> ${i}`);
+// }
 
-array.forEach(function (value, index) {
-  console.log(`${value} -> ${index}`);
-});
+// array.forEach(function (value, index) {
+//   console.log(`${value} -> ${index}`);
+// });
 
-let i = 0;
-while (i < array.length) {
-  console.log(`${array[i]} -> ${i}`);
-  i++;
-}
+// let i = 0;
+// while (i < array.length) {
+//   console.log(`${array[i]} -> ${i}`);
+//   i++;
+// }
+
+//sort the array ascending
+// let arrayNr = [4, 9, 1, 10, 5];
+
+// arrayNr.sort(function (a, b) {
+//   return a - b;
+// });
+// console.log(arrayNr);
+
+//search and display the name of the element with id=5, using for, for each, find
+// let arr = [
+//   { id: 1, name: 'Cristi' },
+//   { id: 2, name: 'Ema' },
+//   { id: 5, name: 'Beni' },
+//   { id: 6, name: 'Dani' },
+// ];
+
+//using FIND
+// console.log(arr.find((person) => person.id === 5).name);
+
+//using FOR
+// for (let i = 0; i == arr.length; i++) {
+//   if (arr[i].id == 5) {
+//     console.log(arr);
+//   }
+// }
+
+//USING forEach
+// arr.forEach(function (name) {
+//   console.log((name = 'Beni'));
+// });

@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 50px 0 0 50px;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background-color: rgb(31, 30, 30);
+    border-radius: 20px;
+}
+
+.select-metric {
+    margin-top: 32px;
+}
+
+.btn {
+    width: 62px;
+    height: 34px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 20px;
+    padding: 5px;
+    background-color: rgb(82, 82, 87);
+    color: white;
+    cursor: pointer;
+}
+
+.btn.active {
+    background-color: whitesmoke;
+    color: black;
+}
+
+form input {
+    width: 88%;
+    padding: 10px 16px;
+    margin: 20px;
+    border-radius: 6px;
+    border: none;
+}
+
+.output {
+    background-color: white;
+    color: gray;
+    padding: 20px 20px;
+    margin: 20px;
+    border-radius: 4px;
+}

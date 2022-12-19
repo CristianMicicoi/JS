@@ -1,10 +1,7 @@
 //Selectors
 const buttons = document.querySelectorAll('.btn');
-
 const inputs = document.querySelectorAll('input');
-
 const tipOutput = document.querySelector('.tip-output');
-
 const totalOutput = document.querySelector('.total-output');
 
 //Event Listener

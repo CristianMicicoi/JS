@@ -9,13 +9,9 @@
 //Selectors
 
 const buttons = document.querySelectorAll('.btn');
-
 const deleteItem = document.querySelector('.del__btn');
-
 const resetDisplay = document.querySelector('.reset__btn');
-
 const showText = document.querySelector('.grid__button');
-
 const output = document.querySelector('.output');
 
 const prio0 = ['(', ')'];
