@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form {
+    margin: 30px 20px 10px 20px;
+}
+
+#msg {
+    padding: 4px 6px;
+    background-color: rgb(245, 253, 222);
+    /* border: none; */
+    border-radius: 2px;
+}
+
+#btn {
+    font-weight: 600;
+    padding: 4px 6px;
+    cursor: pointer;
+    background-color: rgb(214, 231, 226);
+    border-radius: 4px;
+}
+
+.initial {
+    margin: 16px 20px;
+    font-size: 18px;
+    font-weight: 600;
+}

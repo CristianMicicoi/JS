@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.output {
+    width: 98%;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: antiquewhite;
+    color: rgb(3, 3, 68);
+    margin: 24px 12px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.btn {
+    font-weight: 600;
+    width: 70px;
+    padding: 2px 2px;
+    border: 2px solid rgb(80, 41, 41);
+    border-radius: 6px;
+    background-color: rgb(149, 160, 91);
+    cursor: pointer;
+    margin: 0 2px 2px 12px;
+    padding: 5px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    pointer-events: all;
+}
+
+.btn:hover:enabled {
+    background-color: rgb(132, 119, 194);
+    color: rgb(4, 4, 130);
+}
+
+.btn:active:enabled {
+    background-color: rgb(190, 150, 150);
+    color: rgb(42, 40, 37);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 6px 12px;
+}
+
+.form label {
+    font-weight: 500;
+    margin: 12px 0 6px 0;
+}
+
+.form input {
+    padding: 5px;
+    background-color: beige;
+    font-weight: 600;
+}
+
+.submit {
+    width: 74px;
+    margin-top: 12px;
+    cursor: pointer;
+    background-color: rgb(243, 208, 159);
+    padding: 4px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.submit:hover {
+    background-color: rgb(218, 188, 147);
+}
+
+.submit:active {
+    background-color: rgb(240, 182, 99);
+}
