@@ -45,7 +45,6 @@ function renderFlashcards() {
             </div>`;
     })
     .join('');
-
   flashcardsContainer.innerHTML = flashcardsHTML;
   const flashcardsNode = document.querySelectorAll('.flashcard');
   flashcardsNode.forEach((flashcard) => {
